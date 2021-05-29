@@ -1,0 +1,133 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+* {
+  box-sizing: border-box;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+.media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+    </style>
+</head>
+<body>
+
+    <h2>Bizimle İletişime Geçebilirsiniz!</h2>
+    <p></p>
+
+    <div class="container">
+        <form action="/action_page.php">
+            <div class="row">
+                <div class="col-25">
+                    <label for="fname">Ad</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="fname" name="firstname" placeholder="Adın...">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="lname">Soyad</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="lname" name="lastname" placeholder="Soyadın...">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="country">Ülke</label>
+                </div>
+                <div class="col-75">
+                    <select id="country" name="country">
+                        <option value="turkey">Türkiye</option>
+                        <option value="canada">Kanada</option>
+                        <option value="usa">Amerika</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="subject">Açıklama</label>
+                </div>
+                <div class="col-75">
+                    <textarea id="subject" name="subject" placeholder="Bir şeyler yaz..." style="height:200px"></textarea>
+                </div>
+            </div>
+            <div class="row">
+                <input type="submit" value="Gönder">
+            </div>
+
+        </form>
+
+    </div>
+    <div style=" width:1000px;">
+       
+            <center><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3062.363453419553!2d33.455190015216324!3d39.86609599686717!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4081e0f56a614979%3A0xf5bd84ceaf8edf4c!2zS8SxcsSxa2thbGUgw5xuaXZlcnNpdGVzaQ!5e0!3m2!1str!2str!4v1622322331321!5m2!1str!2str" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe></center>
+        </div>
+    
+</body>
+</html>
+
